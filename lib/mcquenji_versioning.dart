@@ -1,4 +1,4 @@
 library mcquenji_versioning;
 
-export modules/updater/updater.dart;
+export 'modules/updater/updater.dart';
 
