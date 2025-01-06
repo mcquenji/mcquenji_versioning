@@ -59,7 +59,7 @@
 <section class="desc markdown">
   <p>Provides the latest releases and the current version of the app.</p>
 <p>For this repository to work, you need to register an implementation of <a href="../mcquenji_versioning/ReleasesDatasource-class.html">ReleasesDatasource</a>, <a href="../mcquenji_versioning/AppInfoService-class.html">AppInfoService</a> and <a href="../mcquenji_versioning/PatchService-class.html">PatchService</a>.
-Use <a href="../mcquenji_versioning/InjectorUptaterX/setupReleasesRepository.html">InjectorUptaterX.setupReleasesRepository</a> to register the required services.</p>
+Use <a href="../mcquenji_versioning/InjectorUpdaterX/setupReleasesRepository.html">InjectorUpdaterX.setupReleasesRepository</a> to register the required services.</p>
 <p>This repository does not check for updates automatically. Call <a href="../mcquenji_versioning/ReleasesRepository/checkForUpdates.html">checkForUpdates</a> manually.</p>
 <p>If <a href="../mcquenji_versioning/PatchService/canApplyPatch.html">PatchService.canApplyPatch</a> returns <code>false</code>, the state will be an error of type <a href="../mcquenji_versioning/ManualInstallRequiredException-class.html">ManualInstallRequiredException</a> containing installation instructions.</p>
 </section>

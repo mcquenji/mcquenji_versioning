@@ -56,6 +56,26 @@
 </h1></div>
 
     
+<section class="desc markdown">
+  <p>Modules for automtically updating the app.</p>
+<p>To use this module, you need to register the required services using <a href="../mcquenji_versioning/InjectorUpdaterX/setupReleasesRepository.html">InjectorUpdaterX.setupReleasesRepository</a>.</p>
+<pre class="language-dart"><code class="language-dart">class AppModule extends Module {
+  @override
+  List&lt;Module&gt; get imports =&gt; [
+    UpdaterModule(),
+ ];
+
+ @override
+ void binds(i) {
+  i.setupReleasesRepository(
+    appInfoService: MyAppInfoService.new,
+    releasesDatasource: MyReleasesDatasource.new,
+    patchService: MyPatchService.new,
+  );
+ }
+}
+</code></pre>
+</section>
 
 
     <section>
