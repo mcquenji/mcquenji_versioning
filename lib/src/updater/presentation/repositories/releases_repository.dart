@@ -7,7 +7,7 @@ import 'package:mcquenji_versioning/src/updater/updater.dart';
 /// Provides the latest releases and the current version of the app.
 ///
 /// For this repository to work, you need to register an implementation of [ReleasesDatasource], [AppInfoService] and [PatchService].
-/// Use [InjectorUptaterX.setupReleasesRepository] to register the required services.
+/// Use [InjectorUpdaterX.setupReleasesRepository] to register the required services.
 ///
 /// This repository does not check for updates automatically. Call [checkForUpdates] manually.
 ///
