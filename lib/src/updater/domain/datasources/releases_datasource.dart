@@ -1,5 +1,5 @@
 import 'package:mcquenji_core/mcquenji_core.dart';
-import 'package:mcquenji_versioning/modules/updater/updater.dart';
+import 'package:mcquenji_versioning/src/updater/updater.dart';
 
 /// Data source for fetching releases.
 abstract class ReleasesDatasource extends Datasource {

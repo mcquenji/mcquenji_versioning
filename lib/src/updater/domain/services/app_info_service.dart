@@ -1,5 +1,5 @@
 import 'package:mcquenji_core/mcquenji_core.dart';
-import 'package:mcquenji_versioning/modules/updater/updater.dart';
+import 'package:mcquenji_versioning/src/updater/updater.dart';
 
 /// Service providing information about the app.
 abstract class AppInfoService extends Service {

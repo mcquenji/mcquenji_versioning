@@ -1,6 +1,8 @@
+import 'package:flutter/widgets.dart';
 import 'package:mcquenji_core/mcquenji_core.dart';
-import 'package:mcquenji_versioning/modules/updater/updater.dart';
+import 'package:mcquenji_versioning/src/updater/updater.dart';
 
+/// Service that installes and applies patches to the app.
 abstract class PatchService extends Service {
   @override
   String get name => 'Patch';
@@ -21,7 +23,7 @@ abstract class PatchService extends Service {
   /// Gets the manual installation instructions for the given [release] in markdown format.
   ///
   /// Used when [canApplyPatch] returns `false`.
-  String getManualInstructions(Release release, Version currentVersion, ReleaseChannel currentChannel);
+  String Function(BuildContext) getManualInstructions(Release release, Version currentVersion, ReleaseChannel currentChannel);
 }
 
 /// Exception thrown when a patch cannot be applied and manual installation is required.
@@ -29,11 +31,11 @@ abstract class PatchService extends Service {
 /// The [instructions] contain the manual installation instructions in markdown format.
 class ManualInstallRequiredException implements Exception {
   /// The manual installation instructions in markdown format.
-  final String instructions;
+  final String Function(BuildContext) instructions;
 
   /// Exception thrown when a patch cannot be applied and manual installation is required.
   ManualInstallRequiredException(this.instructions);
 
   @override
-  String toString() => 'ManualInstallRequiredException: Cannot apply patch. Manual installation required.\n$instructions';
+  String toString() => 'ManualInstallRequiredException: Cannot apply patch. Manual installation required.';
 }

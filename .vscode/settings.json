@@ -4,6 +4,6 @@
   "conventionalCommits.gitmoji": false,
   "conventionalCommits.promptBody": false,
   "conventionalCommitBuilder.autoCommit": false,
-  "dart.flutterSdkPath": ".fvm/versions/3.22.2",
+  "dart.flutterSdkPath": ".fvm/versions/3.27.1",
   "dart.lineLength": 150
 }

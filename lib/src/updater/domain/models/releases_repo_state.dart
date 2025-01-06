@@ -1,7 +1,7 @@
 // ignore_for_file: invalid_annotation_target
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:mcquenji_versioning/modules/updater/updater.dart';
+import 'package:mcquenji_versioning/src/updater/updater.dart';
 
 part 'releases_repo_state.freezed.dart';
 

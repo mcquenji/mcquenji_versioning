@@ -3,7 +3,7 @@
 import 'dart:io' as io;
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:mcquenji_versioning/modules/updater/updater.dart';
+import 'package:mcquenji_versioning/src/updater/updater.dart';
 
 part 'release.freezed.dart';
 part 'release.g.dart';

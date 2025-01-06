@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:mcquenji_core/mcquenji_core.dart';
-import 'package:mcquenji_versioning/modules/updater/updater.dart';
+import 'package:mcquenji_versioning/src/updater/updater.dart';
 
 /// {@template releases_repository}
 /// Provides the latest releases and the current version of the app.
