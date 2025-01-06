@@ -1,6 +1,6 @@
 name: mcquenji_versioning
 description: "Provides a modular way to handle updates in your app."
-version: 0.0.1
+version: 0.0.2
 homepage: "https://github.com/mcquenji/mcquenji_versioning"
 publish_to: none # Remove this line if you wish to publish to pub.dev
 
