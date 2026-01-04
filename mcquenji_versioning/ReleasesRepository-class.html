@@ -25,24 +25,21 @@
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">mcquenji_versioning</a></li>
-    <li><a href="../mcquenji_versioning/mcquenji_versioning-library.html">mcquenji_versioning.dart</a></li>
+    <li><a href="../mcquenji_versioning/">mcquenji_versioning.dart</a></li>
     <li class="self-crumb">ReleasesRepository class</li>
   </ol>
   <div class="self-name">ReleasesRepository</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
 <div
@@ -94,7 +91,7 @@ Use <a href="../mcquenji_versioning/InjectorUpdaterX/setupReleasesRepository.htm
   <section class="summary offset-anchor" id="constructors">
     <h2>Constructors</h2>
     <dl class="constructor-summary-list">
-        <dt id="ReleasesRepository" class="callable">
+        <dt id="ReleasesRepository.new" class="callable">
           <span class="name"><a href="../mcquenji_versioning/ReleasesRepository/ReleasesRepository.html">ReleasesRepository</a></span><span class="signature">(<span class="parameter" id="-param-_releases"><span class="type-annotation"><a href="../mcquenji_versioning/ReleasesDatasource-class.html">ReleasesDatasource</a></span> <span class="parameter-name">_releases</span>, </span><span class="parameter" id="-param-_appInfo"><span class="type-annotation"><a href="../mcquenji_versioning/AppInfoService-class.html">AppInfoService</a></span> <span class="parameter-name">_appInfo</span>, </span><span class="parameter" id="-param-_patcher"><span class="type-annotation"><a href="../mcquenji_versioning/PatchService-class.html">PatchService</a></span> <span class="parameter-name">_patcher</span></span>)</span>
         </dt>
         <dd>
@@ -132,6 +129,18 @@ Use <a href="../mcquenji_versioning/InjectorUpdaterX/setupReleasesRepository.htm
 
 </dd>
 
+        <dt id="isAsync" class="property inherited">
+  <span class="name"><a href="https://mcquenji.github.io/mcquenji_core/mcquenji_core/Repository/isAsync.html">isAsync</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  <code>true</code> if the repository emits <a href="https://mcquenji.github.io/mcquenji_core/mcquenji_core/AsyncValue-class.html">AsyncValue</a>s.
+  <div class="features"><span class="feature">late</span><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
         <dt id="isClosed" class="property inherited">
   <span class="name"><a href="https://pub.dev/documentation/bloc/8.1.4/bloc/BlocBase/isClosed.html">isClosed</a></span>
   <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
@@ -165,6 +174,30 @@ Use <a href="../mcquenji_versioning/InjectorUpdaterX/setupReleasesRepository.htm
 <dd class="inherited">
   The namespace to log messages under.
 e.g. 'Service.Auth'
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="ready" class="property inherited">
+  <span class="name"><a href="https://mcquenji.github.io/mcquenji_core/mcquenji_core/Repository/ready.html">ready</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  
+
+</dt>
+<dd class="inherited">
+  Future that completes after any ongoing build process is finished.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="refreshOptimization" class="property inherited">
+  <span class="name"><a href="https://mcquenji.github.io/mcquenji_core/mcquenji_core/Repository/refreshOptimization.html">refreshOptimization</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  Determines whether refresh optimization is enabled.
   <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
 
 </dd>
@@ -242,15 +275,15 @@ When automatic updates are enabled, the <a href="https://mcquenji.github.io/mcqu
 </dd>
 
         <dt id="build" class="callable inherited">
-  <span class="name"><a href="https://mcquenji.github.io/mcquenji_core/mcquenji_core/Repository/build.html">build</a></span><span class="signature">(<wbr><span class="parameter" id="build-param-trigger"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span> <span class="parameter-name">trigger</span></span>)
+  <span class="name"><a href="https://mcquenji.github.io/mcquenji_core/mcquenji_core/Repository/build.html">build</a></span><span class="signature">(<wbr><span class="parameter" id="build-param-trigger"><span class="type-annotation"><a href="https://mcquenji.github.io/mcquenji_core/mcquenji_core/Trigger-class.html">Trigger</a></span> <span class="parameter-name">trigger</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/FutureOr-class.html">FutureOr</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  Gets called when a repository watched via <a href="https://mcquenji.github.io/mcquenji_core/mcquenji_core/Repository/watch.html">watch</a> emits a new state or when the repository is initialized (in witch case <code>trigger</code> is <a href="https://mcquenji.github.io/mcquenji_core/mcquenji_core/InitialBuildTrigger-class.html">InitialBuildTrigger</a>).
-Also gets called when the repository is updated (if <a href="https://mcquenji.github.io/mcquenji_core/mcquenji_core/Repository/updateInterval.html">updateInterval</a> is not <a href="https://api.flutter.dev/flutter/dart-core/Duration/zero-constant.html">Duration.zero</a>).
+  Recalculates the state of the repository.
+Do not call this method directly, use <a href="https://mcquenji.github.io/mcquenji_core/mcquenji_core/Repository/refresh.html">refresh</a> instead.
   <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
@@ -392,6 +425,20 @@ A <code>change</code> occurs when a new <code>state</code> is emitted.
 
 </dd>
 
+        <dt id="refresh" class="callable inherited">
+  <span class="name"><a href="https://mcquenji.github.io/mcquenji_core/mcquenji_core/Repository/refresh.html">refresh</a></span><span class="signature">(<wbr><span class="parameter" id="refresh-param-trigger"><span class="type-annotation"><a href="https://mcquenji.github.io/mcquenji_core/mcquenji_core/Trigger-class.html">Trigger</a></span> <span class="parameter-name">trigger</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Triggers a repository refresh.
+Catches all exceptions thrown during the build process.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
         <dt id="switchChannel" class="callable">
   <span class="name"><a href="../mcquenji_versioning/ReleasesRepository/switchChannel.html">switchChannel</a></span><span class="signature">(<wbr><span class="parameter" id="switchChannel-param-channel"><span class="type-annotation"><a href="../mcquenji_versioning/ReleaseChannel.html">ReleaseChannel</a></span> <span class="parameter-name">channel</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
@@ -468,7 +515,7 @@ A <code>change</code> occurs when a new <code>state</code> is emitted.
 </header>
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">mcquenji_versioning</a></li>
-    <li><a href="../mcquenji_versioning/mcquenji_versioning-library.html">mcquenji_versioning</a></li>
+    <li><a href="../mcquenji_versioning/">mcquenji_versioning</a></li>
     <li class="self-crumb">ReleasesRepository class</li>
 </ol>
 

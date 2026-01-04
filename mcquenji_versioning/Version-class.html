@@ -25,24 +25,21 @@
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">mcquenji_versioning</a></li>
-    <li><a href="../mcquenji_versioning/mcquenji_versioning-library.html">mcquenji_versioning.dart</a></li>
+    <li><a href="../mcquenji_versioning/">mcquenji_versioning.dart</a></li>
     <li class="self-crumb">Version class</li>
   </ol>
   <div class="self-name">Version</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
 <div
@@ -93,8 +90,8 @@
   <section class="summary offset-anchor" id="constructors">
     <h2>Constructors</h2>
     <dl class="constructor-summary-list">
-        <dt id="Version" class="callable">
-          <span class="name"><a href="../mcquenji_versioning/Version/Version.html">Version</a></span><span class="signature">({<span class="parameter" id="-param-major"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">major</span>, </span><span class="parameter" id="-param-minor"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">minor</span>, </span><span class="parameter" id="-param-patch"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">patch</span>, </span><span class="parameter" id="-param-build"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>(0)</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">build</span></span>})</span>
+        <dt id="Version.new" class="callable">
+          <span class="name"><a href="../mcquenji_versioning/Version/Version.html">Version</a></span><span class="signature">({<span class="parameter" id="-param-major"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">major</span>, </span><span class="parameter" id="-param-minor"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">minor</span>, </span><span class="parameter" id="-param-patch"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">patch</span>, </span><span class="parameter" id="-param-build"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default/Default.html">Default</a>(0)</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">build</span></span>})</span>
         </dt>
         <dd>
           Represents a version number following the <a href="https://semver.org/">semantic versioning specification</a>.
@@ -142,7 +139,8 @@
 
 </dt>
 <dd class="inherited">
-  
+  Create a copy of Version
+with the given fields replaced by the non-null parameter values.
   <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
 
 </dd>
@@ -250,7 +248,7 @@
 
 </dt>
 <dd class="inherited">
-  
+  Serializes this Version to a JSON map.
   <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
@@ -374,7 +372,7 @@
 </header>
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">mcquenji_versioning</a></li>
-    <li><a href="../mcquenji_versioning/mcquenji_versioning-library.html">mcquenji_versioning</a></li>
+    <li><a href="../mcquenji_versioning/">mcquenji_versioning</a></li>
     <li class="self-crumb">Version class</li>
 </ol>
 
