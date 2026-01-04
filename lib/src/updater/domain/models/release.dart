@@ -97,6 +97,12 @@ enum ReleaseChannel {
   ///
   /// This typically contains experimental features that have to be evaluated and may never be released.
   canary,
+
+  /// A demo release channel.
+  ///
+  /// This typically contains releases meant for demonstration purposes only
+  /// with limited functionality.
+  demo,
 }
 
 /// A platform where the release is available.

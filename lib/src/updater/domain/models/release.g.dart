@@ -35,6 +35,7 @@ const _$ReleaseChannelEnumMap = {
   ReleaseChannel.beta: 'beta',
   ReleaseChannel.dev: 'dev',
   ReleaseChannel.canary: 'canary',
+  ReleaseChannel.demo: 'demo',
 };
 
 const _$PlatformEnumMap = {

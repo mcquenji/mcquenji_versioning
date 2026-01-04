@@ -32,8 +32,12 @@ mixin _$Version {
   /// The build version number.
   int get build => throw _privateConstructorUsedError;
 
+  /// Serializes this Version to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Version
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $VersionCopyWith<Version> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -55,6 +59,8 @@ class _$VersionCopyWithImpl<$Res, $Val extends Version>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Version
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -102,6 +108,8 @@ class __$$VersionImplCopyWithImpl<$Res>
       _$VersionImpl _value, $Res Function(_$VersionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Version
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -172,11 +180,13 @@ class _$VersionImpl extends _Version {
             (identical(other.build, build) || other.build == build));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, major, minor, patch, build);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Version
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$VersionImplCopyWith<_$VersionImpl> get copyWith =>
@@ -200,24 +210,26 @@ abstract class _Version extends Version {
 
   factory _Version.fromJson(Map<String, dynamic> json) = _$VersionImpl.fromJson;
 
-  @override
-
   /// The major version number.
-  int get major;
   @override
+  int get major;
 
   /// The minor version number.
-  int get minor;
   @override
+  int get minor;
 
   /// The patch version number.
-  int get patch;
   @override
+  int get patch;
 
   /// The build version number.
-  int get build;
   @override
-  @JsonKey(ignore: true)
+  int get build;
+
+  /// Create a copy of Version
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$VersionImplCopyWith<_$VersionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

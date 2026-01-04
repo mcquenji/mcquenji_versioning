@@ -42,8 +42,12 @@ mixin _$Release {
   /// It is not specified what the download url is for, it could be a patch file, an installer, etc.
   Map<Platform, String> get downloads => throw _privateConstructorUsedError;
 
+  /// Serializes this Release to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Release
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ReleaseCopyWith<Release> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -72,6 +76,8 @@ class _$ReleaseCopyWithImpl<$Res, $Val extends Release>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Release
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -105,6 +111,8 @@ class _$ReleaseCopyWithImpl<$Res, $Val extends Release>
     ) as $Val);
   }
 
+  /// Create a copy of Release
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $VersionCopyWith<$Res> get version {
@@ -140,6 +148,8 @@ class __$$ReleaseImplCopyWithImpl<$Res>
       _$ReleaseImpl _value, $Res Function(_$ReleaseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Release
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -247,12 +257,14 @@ class _$ReleaseImpl extends _Release {
                 .equals(other._downloads, _downloads));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, version, channel, patchNotes,
       releaseDate, const DeepCollectionEquality().hash(_downloads));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Release
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReleaseImplCopyWith<_$ReleaseImpl> get copyWith =>
@@ -277,24 +289,22 @@ abstract class _Release extends Release {
 
   factory _Release.fromJson(Map<String, dynamic> json) = _$ReleaseImpl.fromJson;
 
-  @override
-
   /// The version of the release.
-  Version get version;
   @override
+  Version get version;
 
   /// The release channel.
-  ReleaseChannel get channel;
   @override
+  ReleaseChannel get channel;
 
   /// Patch notes describing the changes in this release.
-  String get patchNotes;
   @override
+  String get patchNotes;
 
   /// The date when the release was published.
+  @override
   @UnixDateTimeConverter()
   DateTime get releaseDate;
-  @override
 
   /// The downloads for this release.
   ///
@@ -303,9 +313,13 @@ abstract class _Release extends Release {
   /// ---
   ///
   /// It is not specified what the download url is for, it could be a patch file, an installer, etc.
-  Map<Platform, String> get downloads;
   @override
-  @JsonKey(ignore: true)
+  Map<Platform, String> get downloads;
+
+  /// Create a copy of Release
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReleaseImplCopyWith<_$ReleaseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

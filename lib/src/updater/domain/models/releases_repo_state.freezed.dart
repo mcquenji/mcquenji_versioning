@@ -31,7 +31,9 @@ mixin _$ReleasesRepoState {
   /// Negative values indicate that no installation is in progress.
   double get progress => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReleasesRepoState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ReleasesRepoStateCopyWith<ReleasesRepoState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -61,6 +63,8 @@ class _$ReleasesRepoStateCopyWithImpl<$Res, $Val extends ReleasesRepoState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ReleasesRepoState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -89,6 +93,8 @@ class _$ReleasesRepoStateCopyWithImpl<$Res, $Val extends ReleasesRepoState>
     ) as $Val);
   }
 
+  /// Create a copy of ReleasesRepoState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $VersionCopyWith<$Res> get currentVersion {
@@ -124,6 +130,8 @@ class __$$ReleasesRepoStateImplCopyWithImpl<$Res>
       $Res Function(_$ReleasesRepoStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReleasesRepoState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -213,7 +221,9 @@ class _$ReleasesRepoStateImpl extends _ReleasesRepoState {
   int get hashCode => Object.hash(runtimeType, currentVersion, channel,
       const DeepCollectionEquality().hash(_latestReleases), progress);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReleasesRepoState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReleasesRepoStateImplCopyWith<_$ReleasesRepoStateImpl> get copyWith =>
@@ -229,26 +239,28 @@ abstract class _ReleasesRepoState extends ReleasesRepoState {
       final double progress}) = _$ReleasesRepoStateImpl;
   const _ReleasesRepoState._() : super._();
 
-  @override
-
   /// The current version of the app.
-  Version get currentVersion;
   @override
+  Version get currentVersion;
 
   /// The current channel.
-  ReleaseChannel get channel;
   @override
+  ReleaseChannel get channel;
 
   /// Latest releases for each channel.
-  Map<ReleaseChannel, Release> get latestReleases;
   @override
+  Map<ReleaseChannel, Release> get latestReleases;
 
   /// Progress of the installation process.
   ///
   /// Negative values indicate that no installation is in progress.
-  double get progress;
   @override
-  @JsonKey(ignore: true)
+  double get progress;
+
+  /// Create a copy of ReleasesRepoState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReleasesRepoStateImplCopyWith<_$ReleasesRepoStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
